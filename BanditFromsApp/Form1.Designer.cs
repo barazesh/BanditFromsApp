@@ -86,16 +86,18 @@
             // 
             chartArea1.Name = "LineArea";
             this.chart1.ChartAreas.Add(chartArea1);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(103, 68);
+            this.chart1.Location = new System.Drawing.Point(0, 89);
+            this.chart1.MaximumSize = new System.Drawing.Size(10000, 10000);
             this.chart1.Name = "chart1";
             series1.ChartArea = "LineArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "linechart";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(300, 223);
+            this.chart1.Size = new System.Drawing.Size(520, 300);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
@@ -104,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(520, 351);
+            this.ClientSize = new System.Drawing.Size(520, 389);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.txtBanditCount);
             this.Controls.Add(this.txtIteration);
