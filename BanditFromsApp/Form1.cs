@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization;
 
 namespace BanditFromsApp
 {
@@ -27,7 +28,14 @@ namespace BanditFromsApp
             Arena games = new Arena(int.Parse(txtBanditCount.Text));
             games.Initiate();
             games.RunGame(int.Parse(txtIteration.Text));
-            txtStatus.Text = "Finnished";
+            chart1.DataBindTable(games.rewardHistory);
+
+            //txtStatus.Text = "Finnished";
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
