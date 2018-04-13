@@ -28,14 +28,9 @@ namespace BanditFromsApp
             Arena games = new Arena(int.Parse(txtBanditCount.Text));
             games.Initiate();
             games.RunGame(int.Parse(txtIteration.Text));
-            chart1.DataBindTable(games.rewardHistory);
-
-            //txtStatus.Text = "Finnished";
-        }
-
-        private void chart1_Click(object sender, EventArgs e)
-        {
+            chart1.Series["linechart"].Points.DataBindY(games.rewardHistory);
 
         }
+
     }
 }

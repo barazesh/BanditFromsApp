@@ -42,7 +42,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(356, 21);
+            this.btnStart.Location = new System.Drawing.Point(346, 19);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 0;
@@ -62,7 +62,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 24);
+            this.label2.Location = new System.Drawing.Point(199, 24);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 13);
             this.label2.TabIndex = 4;
@@ -70,14 +70,14 @@
             // 
             // txtIteration
             // 
-            this.txtIteration.Location = new System.Drawing.Point(248, 21);
+            this.txtIteration.Location = new System.Drawing.Point(258, 20);
             this.txtIteration.Name = "txtIteration";
             this.txtIteration.Size = new System.Drawing.Size(74, 20);
             this.txtIteration.TabIndex = 5;
             // 
             // txtBanditCount
             // 
-            this.txtBanditCount.Location = new System.Drawing.Point(103, 21);
+            this.txtBanditCount.Location = new System.Drawing.Point(111, 20);
             this.txtBanditCount.Name = "txtBanditCount";
             this.txtBanditCount.Size = new System.Drawing.Size(74, 20);
             this.txtBanditCount.TabIndex = 7;
@@ -86,10 +86,9 @@
             // 
             chartArea1.Name = "LineArea";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Bottom;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(0, 89);
+            this.chart1.Location = new System.Drawing.Point(24, 77);
             this.chart1.MaximumSize = new System.Drawing.Size(10000, 10000);
             this.chart1.Name = "chart1";
             series1.ChartArea = "LineArea";
@@ -97,15 +96,15 @@
             series1.Legend = "Legend1";
             series1.Name = "linechart";
             this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(520, 300);
+            this.chart1.Size = new System.Drawing.Size(466, 300);
             this.chart1.TabIndex = 8;
             this.chart1.Text = "chart1";
-            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(520, 389);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.txtBanditCount);
@@ -113,7 +112,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnStart);
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "Form1";
+            this.ShowIcon = false;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
